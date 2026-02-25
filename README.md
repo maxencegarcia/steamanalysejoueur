@@ -22,7 +22,19 @@ Instructions de téléchargement :
 3) Renommer le fichier en steam_data.csv
 4) Placer le fichier dans le même dossier que steam_graph_project.py
 
+# Fonctionnalitées du script
 
+### 1. Visualisation du Graphe
+* Type : Graphe biparti circulaire.
+* Nœuds : Joueurs (cercles extérieurs) et Jeux (carrés intérieurs).
+* Arêtes : Un lien est créé si un joueur possède un jeu de la liste cible.
+* Dynamique : La taille des nœuds "Jeux" est proportionnelle au score de partage entre les joueurs.
+
+### 2. Moteur d'Analyse (Console)
+Le script génère désormais trois types d'analyses avancées :
+* Recommandations de jeux : Identifie les proximités fortes (poids >= 2) et les suggestions "hors-piste" (poids faible) basées sur les projections du graphe.
+* Affinités sociales : Recherche les joueurs ayant les plus fortes similarités de bibliothèque (minimum 2 jeux communs).
+* Analyse de niche : Identification des jeux possédés par un seul utilisateur dans l'échantillon.
 
 # Résultat attendu
 Le script va charger les données, filtrer uniquement sur 16 jeux spécifiques (CS, Dota 2, Skyrim...), ne garder que les joueurs possédant au moins 2 de ces jeux, et générer un graphe biparti circulaire.
